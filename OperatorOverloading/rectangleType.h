@@ -12,7 +12,10 @@ using namespace std;
 
 class rectangleType
 {
-private:
+	friend ostream& operator << (ostream&, const rectangleType &);
+	friend istream& operator >> (istream&, rectangleType &);
+
+protected:
 	double length;
 	double width;
 
@@ -26,6 +29,10 @@ public:
 	double area() const;
 	double perimeter() const;
 	void print() const;
+	rectangleType operator++(int);
+	rectangleType operator++();
+	rectangleType operator--(int);
+	rectangleType operator--();
 };
 
 #endif

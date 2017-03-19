@@ -63,3 +63,47 @@ void rectangleType::print() const
 {
 	cout << "Length = " << length << endl << "Width = " << width << endl;
 }
+
+rectangleType rectangleType::operator++(int)
+{
+	rectangleType temp;
+	temp = *this;
+	++length;
+	++width;
+	return temp;
+}
+
+rectangleType rectangleType::operator++()
+{
+	++length;
+	++width;
+	return *this;
+}
+
+rectangleType rectangleType::operator--(int)
+{
+	rectangleType temp;
+	temp = *this;
+	--length;
+	--width;
+	return temp;
+}
+
+rectangleType rectangleType::operator--()
+{
+	--length;
+	--width;
+	return *this;
+}
+
+ostream & operator<<(ostream& osObject, const rectangleType& rectangle)
+{
+	osObject << "Length: " << rectangle.length << endl << "Width: " << rectangle.width << endl;
+	return osObject;
+}
+
+istream & operator >> (istream& isObject, rectangleType& rectangle)
+{
+	isObject >> rectangle.length >> rectangle.width;
+	return isObject;
+}

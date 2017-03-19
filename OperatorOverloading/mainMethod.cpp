@@ -14,8 +14,29 @@ void main()
 	info myInfo("Paul Heintz", 4, "Operator Overloading");
 	myInfo.displayInfo();
 
-	rectangleType myRectangle(5, 4);
-	myRectangle.print();
+	cout << "** Creating myRectangle and yourRectangle... **" << endl;
+	rectangleType myRectangle(22, 45);
+	rectangleType yourRectangle;
 
-	cin.ignore();
+	cout << endl << "** Overloaded >> **" << endl;
+	cout << "Enter your rectangle's length" << endl << "and width seperated with a space: ";
+	cin >> yourRectangle;
+
+	cout << endl << "** Overloaded << **" << endl;
+	cout << endl << "myRectangle:" << endl;
+	cout << myRectangle;
+	cout << endl << "yourRectangle:" << endl;
+	cout << yourRectangle << endl;
+
+	cout << "** myRectangle pre-increment, yourRectangle post-increment **" << endl;
+	++myRectangle;
+	yourRectangle++;
+	cout << myRectangle << endl;
+	cout << yourRectangle << endl;
+
+	cout << "** myRectangle post-decrement, yourRectangle pre-decrement **" << endl;
+	myRectangle--;
+	--yourRectangle;
+	cout << myRectangle << endl;
+	cout << yourRectangle << endl;
 }
