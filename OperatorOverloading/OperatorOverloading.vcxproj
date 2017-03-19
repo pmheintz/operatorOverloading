@@ -144,9 +144,11 @@
   <ItemGroup>
     <ClCompile Include="info.cpp" />
     <ClCompile Include="mainMethod.cpp" />
+    <ClCompile Include="rectangleType.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="info.h" />
+    <ClInclude Include="rectangleType.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
