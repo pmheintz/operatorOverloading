@@ -33,6 +33,12 @@ public:
 	rectangleType operator++();
 	rectangleType operator--(int);
 	rectangleType operator--();
+	bool operator>(const rectangleType& aRectangle)const;
+	bool operator<(const rectangleType& aRectangle)const;
+	bool operator>=(const rectangleType& aRectangle)const;
+	bool operator<=(const rectangleType& aRectangle)const;
+	rectangleType operator-(const rectangleType& aRectangle)const;
+	rectangleType operator/(const rectangleType& aRectangle)const;
 };
 
 #endif
